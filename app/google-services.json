@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "958547521695",
+    "project_id": "chat-app-6bf6c",
+    "storage_bucket": "chat-app-6bf6c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:958547521695:android:3bb3796b11dac7daa0f2aa",
+        "android_client_info": {
+          "package_name": "com.example.meetup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "958547521695-bjirq6ig6m5318qvuq9anb5uv0m9beaf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOkXnlqgT6G8bYXxqpSJt36SiUPMgRzWo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "958547521695-bjirq6ig6m5318qvuq9anb5uv0m9beaf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

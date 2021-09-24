@@ -1,11 +1,10 @@
 package com.example.meetup.activites;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.meetup.R;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.meetup.databinding.ActivitySignInBinding;
 
 public class SignInActivity extends AppCompatActivity {
@@ -25,5 +24,7 @@ public class SignInActivity extends AppCompatActivity {
         binding.textCreateNewAccount.setOnClickListener(
                 v -> startActivity(new Intent(getApplicationContext(), SignUpActivity.class))
         );
+
     }
+
 }

@@ -1,4 +1,4 @@
-package com.example.meetup;
+package com.example.meetup.activites;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,7 @@ import android.view.animation.BounceInterpolator;
 import android.widget.TextView;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.example.meetup.R;
 import com.example.meetup.activites.SignInActivity;
 
 public class MainActivity extends AppCompatActivity {

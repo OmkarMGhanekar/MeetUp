@@ -1,8 +1,10 @@
-package com.example.meetup;
+package com.example.meetup.activites;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.meetup.R;
 
 public class Second_Activity extends AppCompatActivity {
 

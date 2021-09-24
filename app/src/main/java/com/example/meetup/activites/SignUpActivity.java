@@ -3,12 +3,13 @@ package com.example.meetup.activites;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
-import com.example.meetup.R;
 import com.example.meetup.databinding.ActivitySignUpBinding;
 
 public class SignUpActivity extends AppCompatActivity {
     private ActivitySignUpBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,10 +18,23 @@ public class SignUpActivity extends AppCompatActivity {
         setListeners();
     }
 
-    private void  setListeners(){
+    private void setListeners() {
         binding.textSignIn.setOnClickListener(
-                v-> onBackPressed()
+                v -> onBackPressed()
         );
     }
+
+    private void showToast(String message) {
+        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+    }
+
+    private void signUp() {
+
+    }
+
+    private void isValidSignUpDetails() {
+
+    }
+
 
 }
