@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.meetup">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -10,13 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MeetUp">
-        <activity android:name=".activites.SignUpActivity"
-            android:windowSoftInputMode="adjustResize"
-            />
-        <activity android:name=".activites.SignInActivity"
-            android:windowSoftInputMode="adjustResize">
-
-        </activity>
+        <activity android:name=".activites.UsersActivity"></activity>
+        <activity
+            android:name=".activites.SignUpActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activites.SignInActivity"
+            android:windowSoftInputMode="adjustResize"></activity>
         <activity android:name=".activites.Second_Activity" />
         <activity
             android:name=".activites.MainActivity"
@@ -32,7 +33,7 @@
             android:name=".firebase.MessagingService"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
     </application>
