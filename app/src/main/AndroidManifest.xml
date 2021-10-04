@@ -11,13 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MeetUp">
-        <activity android:name=".activites.UsersActivity"></activity>
+        <activity
+            android:name=".activites.ChatActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".activites.UsersActivity" />
         <activity
             android:name=".activites.SignUpActivity"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".activites.SignInActivity"
-            android:windowSoftInputMode="adjustResize"></activity>
+            android:windowSoftInputMode="adjustResize" />
         <activity android:name=".activites.Second_Activity" />
         <activity
             android:name=".activites.MainActivity"

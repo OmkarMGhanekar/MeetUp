@@ -2,12 +2,14 @@ package com.example.meetup.activites;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import com.example.meetup.R;
 import com.example.meetup.adapters.UsersAdapter;
 import com.example.meetup.databinding.ActivityUsersBinding;
+import com.example.meetup.listeners.UserListener;
 import com.example.meetup.models.User;
 import com.example.meetup.utilities.Constants;
 import com.example.meetup.utilities.PreferenceManager;
@@ -17,7 +19,7 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UsersActivity extends AppCompatActivity {
+public class UsersActivity extends AppCompatActivity implements UserListener {
     private ActivityUsersBinding binding;
     private PreferenceManager preferenceManager;
 
@@ -60,7 +62,7 @@ public class UsersActivity extends AppCompatActivity {
                             users.add(user);
                         }
                         if (users.size() > 0){
-                            UsersAdapter usersAdapter = new UsersAdapter(users);
+                            UsersAdapter usersAdapter = new UsersAdapter(users,this);
                             binding.usersRecyclerview.setAdapter(usersAdapter);
                             binding.usersRecyclerview.setVisibility(View.VISIBLE);
                         }
@@ -87,5 +89,14 @@ public class UsersActivity extends AppCompatActivity {
         else{
             binding.progressBar.setVisibility(View.INVISIBLE);
         }
+    }
+
+
+    @Override
+    public void onUserClicked(User user) {
+        Intent intent = new Intent(getApplicationContext(), ChatActivity.class);
+        intent.putExtra(Constants.KEY_USER, user);
+        startActivity(intent);
+        finish();
     }
 }
