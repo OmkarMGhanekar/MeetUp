@@ -24,8 +24,9 @@ public class MainActivity extends AppCompatActivity {
         appname = findViewById(R.id.appname);
         lottie=findViewById(R.id.lottie);
 
-        appname.animate().translationY(250).setDuration(2000).setStartDelay(0).setInterpolator(new BounceInterpolator());
-        lottie.animate().translationY(1500).setDuration(2000).setStartDelay(2900);
+//        appname.animate().translationY(250).setDuration(2000).setStartDelay(0).setInterpolator(new BounceInterpolator());
+       lottie.animate().setDuration(1000);
+       appname.animate().setDuration(1000);
 
         new Handler().postDelayed(new Runnable() {
             @Override
