@@ -1,5 +1,7 @@
 package com.example.meetup.utilities;
 
+import java.util.HashMap;
+
 public class Constants {
     public static final String KEY_COLLECTION_USERS = "users";
     public static final String KEY_NAME = "name";
@@ -22,4 +24,28 @@ public class Constants {
     public static final String KEY_SENDER_IMAGE="senderImage";
     public static final String KEY_RECEIVER_IMAGE="receiverImage";
     public static final String KEY_LAST_MESSAGE ="lastMessage";
+    public static final String KEY_AVAILABILITY="availability";
+    public static final String REMOTE_MSG_AUTHORIZATION = "Authorization";
+    public static final String REMOTE_MSG_CONTENT_TYPE = "Content-Type";
+    public static final String REMOTE_MSG_DATA="data";
+    public static final String REMOTE_MSG_REGISTRATION_IDS="registration_ids";
+
+    public static HashMap<String, String> remoteMsgHeaders= null;
+
+    public static HashMap<String, String> getRemoteMsgHeaders(){
+        if (remoteMsgHeaders ==null) {
+            remoteMsgHeaders = new HashMap<>();
+            remoteMsgHeaders.put(
+                    REMOTE_MSG_AUTHORIZATION,
+                    "key=AAAA3y3icJ8:APA91bGkfFWXkN_aO9jQPuOZ4OkfByZErCsO6Ikp1jxmd7KFRRwX-ONg-E4zt5UE3sAoOlgF8FE8OIkQ1O6KIuJCub1dk_vWbL8PrSfQIgRgjYXjg6kCPHDmlj58kD4y2bc2PBeVS0km"
+            );
+            remoteMsgHeaders.put(
+                    REMOTE_MSG_CONTENT_TYPE,
+                    "application/json"
+
+            );
+        }
+        return remoteMsgHeaders;
+    }
+
 }
